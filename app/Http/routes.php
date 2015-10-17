@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 
 Route::get('/{name}', function ($name) {
-    return $name
+    return $name;
 });
