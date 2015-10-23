@@ -63,9 +63,17 @@
 
 				@else
 					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-file"></i> Pages</a></li>
-					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-comment"></i> Blog</a></li>
-					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-folder"></i> Media</a></li>
+
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-cubes"></i> CMS <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-file"></i> Pages</a></li>
+								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-comment"></i> Blog</a></li>
+								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-folder"></i> Media</a></li>
+							</ul>
+					</li>
+
 
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-shopping-cart"></i> Store <span class="caret"></span></a>
@@ -84,7 +92,7 @@
 								<li><a href="{{ url('/user') }}">Customers</a></li>
 							</ul>
 					</li>
-					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-cog"></i> Setting</a></li>
+					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-cog"></i> Settings</a></li>
 
 
 						
