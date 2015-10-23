@@ -21,6 +21,9 @@
 	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<!-- Ionic -->
+	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
+	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -66,17 +69,17 @@
 
 
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-cubes"></i> CMS <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="ion-cube"></i> CMS <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-file"></i> Pages</a></li>
-								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-comment"></i> Blog</a></li>
-								<li><a href="{{ url('/auth/login') }}"><i class="fa fa-folder"></i> Media</a></li>
+								<li><a href="{{ url('/auth/login') }}"><i class="ion-document-text"></i> Pages</a></li>
+								<li><a href="{{ url('/auth/login') }}"><i class="ion-chatboxes"></i> Blog</a></li>
+								<li><a href="{{ url('/auth/login') }}"><i class="ion-images"></i> Media</a></li>
 							</ul>
 					</li>
 
 
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-shopping-cart"></i> Store <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="ion-ios-cart"></i> Store <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{ url('/item') }}">Items</a></li>
 								<li><a href="{{ url('/category') }}">Categories</a></li>
@@ -86,23 +89,24 @@
 					</li>
 
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-user"></i> Users <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="ion-person-stalker"></i> Users <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{ url('/user') }}">Staff</a></li>
 								<li><a href="{{ url('/user') }}">Customers</a></li>
 							</ul>
 					</li>
-					<li><a href="{{ url('/auth/login') }}"><i class="fa fa-cog"></i> Settings</a></li>
+					<li><a href="{{ url('/auth/login') }}"><i class="ion-gear-b"></i> Settings</a></li>
 
 
 						
 				@endif
 			</ul>
+			
 
 			<ul class="nav navbar-nav navbar-right" style="margin-right:5px">
 				@if (Auth::guest())
-					<li><a href="{{ url('/auth/login') }}">Login</a></li>
-					<li><a href="{{ url('/auth/register') }}">Register</a></li>
+					<li><a href="{{ url('/auth/login') }}"><i class="ion-locked"></i>  Login</a></li>
+					<li><a href="{{ url('/auth/register') }}"><i class="ion-locked"></i>  Register</a></li>
 				@else
 					<!-- Auth User Menu Bar -->
 					<li class="dropdown">
