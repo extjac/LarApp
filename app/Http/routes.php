@@ -38,6 +38,16 @@ Route::post('/auth/login' 	, 'Auth\AuthController@postLogin');
 //if Logged in
 Route::group( ['middleware' => 'auth'] , function () 
 {	 
+	/*
+	* USERS *
+	*/
+	Route::get('/user', 'UserController@index' );
+	Route::get('/user/{id}/{name}', 'UserController@show');	
+	//API
+	Route::get('/api/v1/user', 'UserController@index' );
+	Route::post('/api/v1/user', 'UserController@store');
+	Route::put('/api/v1/user/{id}', 'UserController@update');
+	Route::delete('/api/v1/user/{id}', 'UserController@destroy');
 
 	/*
 	* CATEGORIES
@@ -51,26 +61,16 @@ Route::group( ['middleware' => 'auth'] , function ()
 	Route::delete('/api/v1/category/{id}', 'CategoryController@destroy' );
 
 	/*
-	* PRODUCTS
+	* ITEMS
 	*/
-	Route::get('/product', 'ProductController@index' );
+	Route::get('/product', 'ItemController@index' );
 	//API
-	Route::get('/api/v1/product', 'ProductController@getList' );
-	Route::get('/api/v1/product/{id}', 'ProductController@show' );
-	Route::post('/api/v1/product', 'ProductController@store' ); 
-	Route::put('/api/v1/product', 'ProductController@update' ); 
-	Route::delete('/api/v1/product/{id}', 'ProductController@destroy' );
+	Route::get('/api/v1/item', 'ItemController@getList' );
+	Route::get('/api/v1/item/{id}', 'ItemController@show' );
+	Route::post('/api/v1/item', 'ItemController@store' ); 
+	Route::put('/api/v1/item', 'ItemController@update' ); 
+	Route::delete('/api/v1/item/{id}', 'ItemController@destroy' );
 
-	/*
-	* USERS *
-	*/
-	Route::get('/user', 'UserController@index' );
-	Route::get('/user/{id}/{name}', 'UserController@show');	
-	//API
-	Route::get('/api/v1/user', 'UserController@index' );
-	Route::post('/api/v1/user', 'UserController@store');
-	Route::put('/api/v1/user/{id}', 'UserController@update');
-	Route::delete('/api/v1/user/{id}', 'UserController@destroy');
 
 
 
