@@ -62,14 +62,15 @@
 				@if ( Auth::guest() )
 
 				@else
-					<li>
-						<a href="{{ url('/category') }}"> <i class="fa fa-cubes"></i> Category </a>
-					</li>
-					<li>
-						<a href="{{ url('/product') }}"> <i class="fa fa-cube"></i> Product </a>
-					</li>
-					<li>
-						<a href="{{ url('/kpi') }}"> <i class="fa fa-area-chart"></i> KPI </a>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-cart"></i> Store <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{{ url('/item') }}">Items</a></li>
+								<li><a href="{{ url('/category') }}">Categories</a></li>
+								<li><a href="{{ url('/order') }}">Orders</a></li>
+								<li><a href="{{ url('/order') }}">Payments</a></li>
+							</ul>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="fa fa-user"></i> Users <span class="caret"></span></a>
