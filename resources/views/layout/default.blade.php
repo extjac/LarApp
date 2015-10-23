@@ -44,7 +44,7 @@
 
 <body>
 
-<nav class="navbar navbar-custom   navbar-fixed-top" role="banner" data-spy="affix" data-offset-top="80">
+<nav class="navbar navbar-inverse   navbar-fixed-top" role="banner" data-spy="affix" data-offset-top="80">
 
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
